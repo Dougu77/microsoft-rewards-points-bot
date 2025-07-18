@@ -1,4 +1,6 @@
 FOOTBALL_TEAMS = [
+    
+    # Classificação de 16/07/2025
 
     # Série A (20 clubes)
     'Atlético Mineiro', 'Bahia', 'Botafogo', 'Bragantino', 'Ceará',
@@ -35,3 +37,7 @@ FOOTBALL_TEAMS = [
 ]
 
 EDGE_PATH = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'
+
+TOP_SEARCH_BAR_POSITIONS = (200, 55)
+
+MAIN_SEARCH_BAR_POSITIONS = (250, 150)

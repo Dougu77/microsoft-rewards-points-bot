@@ -1,9 +1,9 @@
 def start() -> None:
-    print('-' * 70)
-    print(f'{"-" * 26} Microsoft Rewards {"-" * 25}')
-    print('-' * 70)
-    print('\nEsse bot é responsável por fazer as pesquisa diárias no Microsft Edge,')
-    print('para conseguir pontos no Microsoft Rewards.\n')
+    print('-' * 99)
+    print(f'{"-" * 40} Microsoft Rewards {"-" * 40}') # Caracteres no título = 19
+    print('-' * 99)
+    print('\n-> Esse bot é responsável por fazer as pesquisa diárias para conseguir pontos no Microsoft Rewards.\n')
+    # print('-> Pressione "S" para parar o bot\n')
     input('Pressione ENTER para começar... ')
     print()
 
