@@ -7,8 +7,17 @@ def start() -> None:
     input('Pressione ENTER para começar... ')
     print()
 
+def opening_edge() -> None:
+    print('\nAbrindo o Edge...')
+
+def entering_edge() -> None:
+    print('\nEntrando no Edge...')
+
+def closing_edge() -> None:
+    print('\nEncerrando o Edge...')
+
 def end() -> None:
-    input('Pressione ENTER para sair do programa... ')
+    input('\nPressione ENTER para sair do programa... ')
 
 def exception(msg:str) -> None:
-    print(f'Algo deu errado: {msg}')
+    print(f'\nAlgo deu errado: {msg}')
