@@ -31,7 +31,7 @@ def search(stop_event:threading.Event) -> None:
         stop_event (threading.Event): Evento de quando é pressionada a tecla "S", indicando que é para parar
     '''
     temporary_list = COUNTRIES.copy()
-    for _ in range(30):
+    for _ in range(40):
         if stop_event.is_set():
             console.stop_search()
             break
