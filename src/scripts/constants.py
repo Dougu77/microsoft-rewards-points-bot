@@ -37,6 +37,8 @@ COUNTRIES = [
 
 EDGE_PATH = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'
 
+EDGE_WINDOW_NAME = 'Nova guia - Pessoal — Microsoft\u200b Edge'
+
 TOP_SEARCH_BAR_POSITIONS = (200, 55)
 
 MAIN_SEARCH_BAR_POSITIONS = (250, 150)

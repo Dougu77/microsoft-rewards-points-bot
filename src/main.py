@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
     # Aguarda a finalização das threads
     bot_thread.join()
-    stop_event.set()  # garante que a thread do teclado pare
+    stop_event.set()  # Garante que a thread do teclado pare
     keyboard_thread.join()
     
     bot.close_edge()

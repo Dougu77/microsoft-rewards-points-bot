@@ -2,16 +2,24 @@ from datetime import datetime
 from .constants import *
 from . import console
 import threading
+import pygetwindow
 import pyautogui
 import keyboard
 import random
 import time
 import os
 
+def maximize_edge_window() -> None:
+    windows: list[pygetwindow.Window] = pygetwindow.getWindowsWithTitle(EDGE_WINDOW_NAME)
+    for window in windows:
+        window.maximize()
+
 def open_edge() -> None:
     '''summary_ Abre o navegador
     '''
     os.startfile(EDGE_PATH)
+    time.sleep(3)
+    maximize_edge_window()
     console.opening_edge()
     time.sleep(WAIT_TIME)
 
