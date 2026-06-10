@@ -1,8 +1,8 @@
 from datetime import datetime
 from .constants import *
 from . import console
-import threading
 import pygetwindow
+import threading
 import pyautogui
 import keyboard
 import random
@@ -23,23 +23,27 @@ def open_edge() -> None:
     console.opening_edge()
     time.sleep(WAIT_TIME)
 
-def open_bing_main_page() -> None:
+def open_bing_main_page() -> str:
     '''summary_ Faz a primeira pesquisa, que faz entrar na tela principal do Bing
     '''
+    first_search = random.choice(COUNTRIES)
     keyboard.press_and_release('ctrl+t')
     pyautogui.click(TOP_SEARCH_BAR_POSITIONS[0], TOP_SEARCH_BAR_POSITIONS[1])
-    keyboard.write(random.choice(COUNTRIES))
+    keyboard.write(first_search)
     keyboard.press_and_release('enter')
     time.sleep(WAIT_TIME)
+    return first_search
 
-def search(stop_event:threading.Event) -> None:
-    '''summary_ Pesquisa nomes de países 30 vezes
+def search(stop_event:threading.Event, first_search:str) -> None:
+    '''summary_ Pesquisa nomes de países 20 vezes
 
     Args:
         stop_event (threading.Event): Evento de quando é pressionada a tecla "S", indicando que é para parar
     '''
     temporary_list = COUNTRIES.copy()
-    for _ in range(40):
+    temporary_list.remove(first_search)
+
+    for _ in range(20):
         if stop_event.is_set():
             console.stop_search()
             break

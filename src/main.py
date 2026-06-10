@@ -8,8 +8,8 @@ stop_event = threading.Event()
 def run_bot() -> None:
     try:
         bot.open_edge()
-        bot.open_bing_main_page()
-        bot.search(stop_event)
+        first_search = bot.open_bing_main_page()
+        bot.search(stop_event, first_search)
     except Exception as msg:
         console.exception(msg)
 
